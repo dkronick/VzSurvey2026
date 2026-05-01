@@ -1,0 +1,1143 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% Fix header height
+\setlength{\headheight}{14pt}
+
+% Tighter spacing throughout document
+\setstretch{1.05}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.3em}
+
+% Tighter section spacing
+\titleformat{\section}
+  {\large\bfseries}
+  {SECCIÓN }
+  {0em}
+  {}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+
+% Question counter
+\newcounter{question}
+\setcounter{question}{0}
+
+% Question command with no space after - connects directly to responses
+\newcommand{\question}[1]{%
+  \stepcounter{question}%
+  \vspace{0.3em}%
+  \noindent\textbf{Q\thequestion.} #1%
+}
+
+% Subquestion command
+\newcommand{\subquestion}[2]{%
+  \vspace{0.3em}%
+  \noindent\textbf{Q\thequestion#1.} #2%
+}
+
+% Instruction command
+\newcommand{\instruction}[1]{%
+  \vspace{0.1em}%
+  \noindent\textsc{\small #1}%
+  \vspace{0.1em}%
+}
+
+% Note command
+\newcommand{\surveynote}[1]{%
+  \vspace{0.1em}%
+  \noindent\textit{\small #1}%
+  \vspace{0.1em}%
+}
+
+% Response options - no space before, space after for next question
+\newenvironment{responses}
+{\begin{enumerate}[label=(\arabic*), leftmargin=2em, itemsep=0em, parsep=0em, topsep=0em]}
+{\end{enumerate}\vspace{0.3em}}
+
+% Multiple choice options
+\newenvironment{multiplechoice}
+{\begin{itemize}[label=\textbf{[~]}, leftmargin=2em, itemsep=0em, parsep=0em, topsep=0em]}
+{\end{itemize}\vspace{0.3em}}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{Encuesta Venezuela 2026}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{ENCUESTA VENEZUELA 2026}}\\
+\vspace{0.3em}
+{\large Borrador en Español}\\
+\vspace{0.5em}
+\end{center}
+
+\section*{INTRODUCCIÓN — LEER EN VOZ ALTA AL ENCUESTADO/A}
+
+Mi nombre es \{NOMBRE DEL ENTREVISTADOR/A\}, y trabajo en nombre de la empresa encuestadora Datanálisis y de investigadores académicos de tres universidades. Estamos realizando un estudio de investigación para comprender mejor las opiniones de las personas sobre lo que ocurre en Venezuela.
+
+Se le invita a participar en este estudio porque usted es un/a residente adulto/a de esta zona. Si acepta participar, le haré una serie de preguntas. La entrevista tomará aproximadamente 25–30 minutos. Si acepta, nos pondremos en contacto nuevamente para una entrevista de seguimiento en seis meses.
+
+Su participación es completamente voluntaria. Puede optar por no participar, y si participa puede negarse a responder cualquier pregunta, o puede detener la entrevista en cualquier momento. Si decide participar, podemos ofrecerle un pequeño agradecimiento en forma de [INCENTIVO].
+
+Todas las respuestas serán anonimizadas antes de ser compartidas con los investigadores universitarios que encargaron esta encuesta. Su nombre, dirección u otra información de identificación NO será compartida fuera de Datanálisis, ni Datanálisis conservará su información de identificación después de la entrevista de seguimiento.
+
+Con fines de control de calidad, podrán grabarse fragmentos de audio de tres segundos de la entrevista a intervalos aleatorios. La grabación se utilizará únicamente para garantizar que se sigan correctamente los procedimientos de entrevista y no será vinculada a su nombre.
+
+No se anticipan riesgos más allá de los que se encuentran en una conversación cotidiana. Algunas preguntas pueden parecer sensibles; puede omitir cualquier pregunta que prefiera no responder.
+
+Si tiene preguntas sobre este estudio, puede comunicarse con (empresa local) al (XXX-XXX-XXXX) o con (Coordinador/a de Campo) al (correo electrónico).
+
+¿Tendría 25–30 minutos para participar?
+
+\instruction{Encuestador/a: Registre la respuesta del encuestado/a a continuación. No leer las opciones en voz alta.}
+\begin{responses}
+\item Sí — continuar con la entrevista
+\item Sí, pero solicita entrevista en otro momento — concertar cita
+\item No — rechaza la entrevista — FIN
+\item No — no puede participar por incapacidad mental o física — FIN
+\item No — habla otro idioma — FIN
+\end{responses}
+
+\newpage
+
+\section{A: PERCEPCIONES DE SEGURIDAD Y LA POLICÍA}
+
+\question{Si viera hoy a miembros de los siguientes grupos patrullando su barrio, ¿se sentiría más seguro/a, menos seguro/a, o no haría ninguna diferencia?}
+
+\instruction{Leer cada grupo en voz alta. Registre una respuesta por fila.}
+
+\vspace{0.3em}
+\begin{tabular}{p{4cm}p{3.5cm}p{3.5cm}p{3.5cm}}
+\textbf{Grupo} & \textbf{Más seguro/a} & \textbf{Menos seguro/a} & \textbf{Neutral / sin cambio} \\
+\midrule
+PNB & \_\_\_ & \_\_\_ & \_\_\_ \\
+FAES & \_\_\_ & \_\_\_ & \_\_\_ \\
+UOTE & \_\_\_ & \_\_\_ & \_\_\_ \\
+Policía municipal & \_\_\_ & \_\_\_ & \_\_\_ \\
+Policía estadal & \_\_\_ & \_\_\_ & \_\_\_ \\
+SEBIN & \_\_\_ & \_\_\_ & \_\_\_ \\
+Guardia Nacional & \_\_\_ & \_\_\_ & \_\_\_ \\
+Ejército & \_\_\_ & \_\_\_ & \_\_\_ \\
+CICPC & \_\_\_ & \_\_\_ & \_\_\_ \\
+DGCIM & \_\_\_ & \_\_\_ & \_\_\_ \\
+\end{tabular}
+
+\question{En general, ¿qué tan satisfecho/a está con el desempeño de la policía en su sector?}
+\begin{responses}
+\item Muy satisfecho/a
+\item Satisfecho/a
+\item Insatisfecho/a
+\item Muy insatisfecho/a
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{La policía respeta los derechos de los ciudadanos cuando realiza su trabajo.}
+\begin{responses}
+\item Muy de acuerdo
+\item Algo de acuerdo
+\item Algo en desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Y ahora pensando en grupos armados no estatales, voy a mencionarle algunos y le pediré que me diga cuáles de ellos operan en el sector donde usted vive.}
+
+\instruction{Leer opciones en voz alta, marcar respuestas múltiples. Aleatorizar orden.}
+\begin{responses}
+\item Colectivos armados [SI RESPONDE SÍ: ¿Cuál?]
+\item Delincuencia organizada o bandas delictivas
+\item Megabanda [SI RESPONDE SÍ: ¿Cuál?]
+\item Sindicato o sindicatos [SI RESPONDE SÍ: ¿Cuál?]
+\item Seguridad privada / vigilantes
+\item Guerrillas colombianas [SI RESPONDE SÍ: ¿Cuál?]
+\item Ninguno
+\item Otro — especifique: [ESPACIO]
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes indican presencia de bandas] Algunas personas dicen que esta banda es una amenaza para su comunidad, mientras que otras dicen que la banda protege y defiende la comunidad. ¿Cuál de estas opiniones está más cerca de la suya?}
+
+\instruction{Preguntar solo si el encuestado/a indicó que una banda opera en su barrio.}
+\begin{responses}
+\item Una amenaza
+\item Protege y defiende
+\item Un poco de ambas
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes indican presencia de bandas] ¿Sabe si la banda/las bandas en su comunidad brinda/an algunos de los siguientes servicios a su comunidad?}
+
+\instruction{Preguntar solo si el encuestado/a indicó que una banda opera en su barrio.}
+\begin{responses}
+\item Cajas de CLAP 
+\item Resolución de conflictos
+\item Organización de festivales y/o eventos comunitarios
+\item Servicios de salud (por ejemplo acceso a la medicina o implementando tocas de queda durante COVID) 
+\item Préstamos
+\item Otro — especifique: [ESPACIO]
+\end{responses}
+
+\question{[Solo para quienes indican presencia de bandas] Algunas personas dicen que las bandas en el país se han vuelto más organizadas y poderosas en los últimos años mientras otras dicen que siguen igual de desorganizadas. ¿Cuál describe mejor la situación en su comunidad?}
+
+\instruction{Preguntar solo si el encuestado/a indicó que una banda opera en su barrio.}
+\begin{responses}
+\item Se han vuelto más organizadas y poderosas
+\item Siguen igual que antes
+\item Se han vuelto menos organizadas
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su sector, ¿quién brinda protección contra el crimen? Puede ser una fuerza de seguridad del Estado o algún grupo armado.}
+
+\instruction{Anotar textualmente. No leer opciones.}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{1em}
+\noindent\rule{\textwidth}{0.5pt}
+
+\question{Si tuviera un conflicto con un vecino, ¿a quién acudiría primero?}
+
+\instruction{Anotar textualmente. No leer opciones.}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{1em}
+\noindent\rule{\textwidth}{0.5pt}
+
+\question{Y ahora pensando en seguridad, ¿qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: Hay menos delincuencia en su comunidad ahora que hace cinco años?}
+
+\surveynote{NOTA AL IRB: Podemos cambiar el año de referencia según orientación de la empresa encuestadora.}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: Me siento más seguro(a) cuando salgo de mi casa ahora que hace cinco años?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Diría que en su barrio, la tendencia de la delincuencia en los últimos cinco años ha sido...?}
+\begin{responses}
+\item Aumentando mucho
+\item Aumentando algo
+\item Se mantiene igual
+\item Disminuyendo algo
+\item Disminuyendo mucho
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Aunque los expertos coinciden en que la tasa de homicidios ha disminuido aproximadamente un 50\% en los últimos diez años, no hay consenso sobre la explicación. ¿Cuál de los siguientes considera un factor importante? Seleccione todos los que apliquen.}
+
+\instruction{Leer las opciones en voz alta. Marque todas las que correspondan. Aleatorizar orden.}
+\begin{multiplechoice}
+\item Mano dura: el gobierno adoptó una política de mano dura (p. ej., OLP, FAES)
+\item Emigración de delincuentes
+\item Policía comunitaria
+\item La delincuencia se ha organizado más
+\item Colapso económico
+\item Recuperación económica
+\item Los funcionarios policiales están más preparados
+\item Políticas de zonas de paz
+\item Se han recuperado los valores familiares
+\item No creo que las tasas de homicidio hayan disminuido
+\item Otro [¿Cuál?] [ESPACIO]
+\end{multiplechoice}
+
+\subquestion{a}{[Solo si seleccionó al menos un factor en Q11, excepto ``No creo que hayan disminuido''] De los factores que seleccionó en la pregunta anterior, ¿cuál considera el MÁS importante para la disminución de los homicidios?}
+
+\instruction{Re-leer solo las opciones que el encuestado seleccionó. Marque una.}
+\begin{responses}
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\subquestion{b}{¿Cree usted que la disminución de los homicidios se debe al gobierno de Maduro?}
+\begin{responses}
+\item Sí, mucho
+\item Sí, algo
+\item Poco
+\item No, nada
+\item No creo que se haya disminuido la delincuencia violenta [NO LEER]
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: Se debería restablecer la Policía Metropolitana?}
+
+\instruction{Preguntar solo en la muestra de Caracas.}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuál de los siguientes considera la causa principal de la delincuencia en Venezuela?}
+
+\instruction{Leer las opciones en voz alta. Marque una sola respuesta. Aleatorizar orden.}
+\begin{responses}
+\item Desintegración familiar
+\item Falta de empleo
+\item Falta de educación
+\item Gobierno ineficaz
+\item Consumo de drogas
+\item Corrupción policial
+\item Sistema de justicia penal ineficiente
+\item Pobreza
+\item Falta de preparación policial
+\item Insuficiente número de policías
+\item Embarazo adolescente
+\item Otro — especifique: [ESPACIO]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿En cuál de las siguientes situaciones cree que está justificado que un oficial de policía use la fuerza física contra un ciudadano?}
+
+\instruction{Leer cada situación en voz alta. Registre Sí/No para cada fila.}
+
+\vspace{0.3em}
+\begin{tabular}{p{9cm}p{2cm}p{2cm}}
+\textbf{Situación} & \textbf{Sí} & \textbf{No} \\
+\midrule
+A. Cuando el ciudadano se resiste al arresto & \_\_\_ & \_\_\_ \\
+B. Cuando el oficial sabe que el ciudadano cometió un delito [GRUPO A: y el juez es muy severo] [GRUPO B: y el juez lo va a soltar] & \_\_\_ & \_\_\_ \\
+C. Cuando la vida de otros ciudadanos está en riesgo & \_\_\_ & \_\_\_ \\
+D. Cuando se sabe que el ciudadano pertenece a una banda delictiva & \_\_\_ & \_\_\_ \\
+E. Cuando el ciudadano falta el respeto a un oficial de policía & \_\_\_ & \_\_\_ \\
+F. Cuando los residentes del barrio lo solicitan & \_\_\_ & \_\_\_ \\
+G. Cuando la vida del propio oficial está en peligro & \_\_\_ & \_\_\_ \\
+\end{tabular}
+
+\question{En los últimos dos años, ¿alguien le ha cobrado una ``vacuna''? Es decir, ¿le han exigido dinero para ``proteger'' su negocio, vehículo u otra propiedad frente a posibles amenazas o daños?}
+\begin{responses}
+\item Sí
+\item No
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes responden sí] ¿Quién lo hizo? Puede ser un funcionario de una fuerza de seguridad del Estado o algún grupo armado no estatal, por ejemplo.}
+
+\instruction{Preguntar solo si respondió 'Sí' a la pregunta anterior. Anotar textualmente.}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{1em}
+\noindent\rule{\textwidth}{0.5pt}
+
+\question{En los últimos dos años, ¿algún funcionario público —por ejemplo un policía— le ha pedido dinero para evitar una multa, una sanción o algún problema, aunque ese pago no fuera oficial?}
+\begin{responses}
+\item Sí
+\item No
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes responden sí] El funcionario involucrado, ¿pertenece a cuál institución estatal?}
+
+\instruction{Preguntar solo si respondió 'Sí' a la pregunta anterior. Anotar textualmente.}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+
+\question{Existe un dicho sobre la policía en Venezuela: «Un ser sin estudio es un policía». ¿Qué tan de acuerdo o en desacuerdo está con esto?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: La mayoría de las personas que se incorporan a la policía lo hacen porque quieren servir y proteger a los ciudadanos?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: La mayoría de quienes entran a la policía lo hacen para aprovechar su posición y/o sacar dinero?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: La mayoría de quienes entran a la policía lo hacen para tener poder sobre otras personas?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cómo se sentiría si tuviera un hijo o una hija que quisiera casarse con un/a oficial de policía?}
+\begin{responses}
+\item Muy contento/a
+\item Contento/a
+\item Indiferente
+\item Preocupado/a
+\item Muy preocupado/a
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Pensando en los oficiales de la Policía Nacional Bolivariana (PNB), ¿a qué clase social cree que pertenece la mayoría de ellos?}
+\begin{responses}
+\item Clase alta
+\item Clase media-alta
+\item Clase media
+\item Clase media-baja
+\item Clase popular/trabajadora
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Pensando en los oficiales de la CICPC, ¿a qué clase social cree que pertenece la mayoría de ellos?}
+\begin{responses}
+\item Clase alta
+\item Clase media-alta
+\item Clase media
+\item Clase media-baja
+\item Clase popular/trabajadora
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En el municipio donde usted vive, ¿existe la policía municipal?}
+\begin{responses}
+\item Sí
+\item No
+\item[(98)] No sabe [NO LEER]
+\end{responses}
+
+\question{En una escala del 1 al 5, ¿qué tan capaz cree que es cada uno de los siguientes cuerpos policiales para resolver delitos? (1 = nada capaz; 5 = muy capaz)}
+
+\vspace{0.3em}
+\begin{tabular}{p{4cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\textbf{Cuerpo policial} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\midrule
+PNB & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+CICPC & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Policía municipal & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Policía estadal & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+\end{tabular}
+
+\question{En el último año, ¿algún oficial de policía lo/la detuvo para revisar su teléfono?}
+\begin{responses}
+\item Sí
+\item No
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Ha hecho alguna de las siguientes cosas por preocupaciones sobre seguridad o privacidad? Marque todas las que apliquen.}
+\begin{multiplechoice}
+\item Borro mis conversaciones de WhatsApp
+\item He dejado de darle ``like'' a publicaciones con las que estoy de acuerdo
+\item He dejado de comentar publicaciones en redes sociales
+\item No subo fotos a estados o redes sociales
+\item No hablo de temas políticos en la calle
+\item He dejado de participar en foros y espacios públicos
+\item Ninguna de las anteriores
+\end{multiplechoice}
+
+\section{B: POLÍTICAS DE SEGURIDAD}
+
+\question{Algunas personas piensan que los militares son más eficaces para combatir el crimen que la policía, mientras que otras piensan que la policía es más eficaz que los militares. ¿Con cuál de estas opiniones está más de acuerdo?}
+\begin{responses}
+\item Los militares son mucho más eficaces
+\item Los militares son algo más eficaces
+\item Ambos son igual de eficaces
+\item La policía es algo más eficaz
+\item La policía es mucho más eficaz
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Alguna vez usted o algún miembro de su familia experimentó directamente un operativo de la OLP o de las FAES —por ejemplo, un allanamiento de su vivienda, un desalojo, una detención, una agresión física, o la muerte de un familiar?}
+\begin{responses}
+\item Sí [¿Cuál?] [ESPACIO]
+\item No
+\item Prefiero no decir
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su opinión, ¿las operaciones de las OLP y las FAES hicieron a Venezuela más segura, menos segura, o no cambiaron significativamente la seguridad?}
+\begin{responses}
+\item Mucho más segura
+\item Algo más segura
+\item Sin cambio significativo
+\item Algo menos segura
+\item Mucho menos segura
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Usted o algún miembro de su familia experimentó directamente la Operación Tun Tun —por ejemplo, si funcionarios fueron a su casa, allanaron su vivienda, detuvieron o exiliaron a alguien de su familia, o lo amenazaron y/o intimidaron?}
+\begin{responses}
+\item Sí
+\item No
+\item Prefiero no decir
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Durante los últimos quince años, el gobierno implementó una política conocida como las zonas de paz, en la cual el gobierno negociaba pactos con grupos delictivos para reducir la criminalidad. ¿Su barrio fue alguna vez designado zona de paz?}
+\begin{responses}
+\item Sí
+\item No
+\item No estoy seguro/a
+\item No conozco las zonas de paz
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes responden sí] ¿Siente que la política de zona de paz hizo que su sector fuera más seguro, menos seguro, o no cambió significativamente la seguridad?}
+
+\instruction{Preguntar solo si el encuestado/a respondió 'Sí' a la pregunta anterior.}
+\begin{responses}
+\item Más seguro
+\item Menos seguro
+\item No cambió significativamente la seguridad
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes responden no] ¿Siente que las zonas de paz hicieron al país más seguro, menos seguro, o no cambiaron significativamente la seguridad?}
+
+\instruction{Preguntar solo si el encuestado/a respondió 'No' a Q22.}
+\begin{responses}
+\item Más seguro
+\item Menos seguro
+\item No cambiaron significativamente la seguridad
+\item No conozco las zonas de paz
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Observe las siguientes imágenes de agentes de seguridad del Estado. ¿Cuál de estos dos agentes cree que es más probable que disuada el crimen?}
+
+\instruction{Aleatorizar pares de imágenes.}
+
+% TODO: Add images here - you'll need to include the image files and use:
+% \begin{figure}[h]
+% \centering
+% \begin{tabular}{cc}
+% \includegraphics[width=0.4\textwidth]{agent1.jpg} & \includegraphics[width=0.4\textwidth]{agent2.jpg} \\
+% Agente A & Agente B
+% \end{tabular}
+% \end{figure}
+
+\begin{responses}
+\item Agente A
+\item Agente B
+\item Ambos por igual
+\item Ninguno de los dos
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Algunas personas dicen que a las democracias les cuesta más combatir la delincuencia que a las autocracias, mientras que otras creen que no hay ningún conflicto entre la democracia y combatir la delincuencia. ¿Cuál de estas opiniones se acerca más a la suya?}
+\begin{responses}
+\item A las democracias les cuesta más combatir la delincuencia
+\item No hay ningún conflicto entre la democracia y combatir la delincuencia
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para quienes dicen que a las democracias les cuesta] Y en su opinión, ¿qué es más importante: que haya democracia en Venezuela, o que se combata la delincuencia?}
+
+\instruction{Preguntar solo si respondió que a las democracias les cuesta más combatir delincuencia.}
+\begin{responses}
+\item Es más importante que haya democracia en Venezuela
+\item Es más importante que haya bajos niveles de delincuencia
+\item Ambas son igual de importantes
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿En qué medida está de acuerdo con la siguiente afirmación: ``Los derechos humanos deben protegerse, incluso si estos derechos hacen más difícil que la policía combata el crimen''?}
+\begin{responses}
+\item Muy en desacuerdo
+\item En desacuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item De acuerdo
+\item Muy de acuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\section{C: TREN DE ARAGUA}
+
+\question{¿Ha oído hablar alguna vez del Tren de Aragua?}
+\begin{responses}
+\item Sí
+\item No
+\item No estoy seguro/a
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Para quienes responden sí] ¿Qué es?}
+
+\instruction{Preguntar solo si respondió "Sí" a la pregunta anterior. Registre la respuesta abierta.}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{1em}
+\noindent\rule{\textwidth}{0.5pt}
+
+\question{[Para quienes responden sí] ¿Con cuál de las siguientes afirmaciones sobre el Tren de Aragua está de acuerdo? Seleccione todas las que apliquen.}
+
+\instruction{Preguntar solo si respondió "Sí" a Q26.}
+\begin{multiplechoice}
+\item El Tren de Aragua representa o representaba una amenaza para la seguridad del país
+\item El Tren de Aragua representa o representaba una amenaza para mí y mi familia
+\item El Tren de Aragua es menos poderoso de lo que la mayoría cree
+\item El Tren de Aragua es más poderoso de lo que la mayoría cree
+\item Es posible reconocer físicamente a los miembros del TdA por su vestimenta o tatuajes
+\item No estoy de acuerdo con ninguna de estas afirmaciones
+\item (99) No responde [NO LEER]
+\end{multiplechoice}
+
+\question{[Para quienes responden sí] Y ahora pensando en otros aspectos del Tren de Aragua, ¿con cuál de las siguientes afirmaciones está de acuerdo? Seleccione todas las que apliquen.}
+
+\instruction{Preguntar solo si respondió "Sí" a Q26.}
+\begin{multiplechoice}
+\item El gobierno controla o controlaba al Tren de Aragua
+\item El gobierno venezolano desarticuló al TdA
+\item El gobierno de Maduro envió miembros del Tren de Aragua a los Estados Unidos para desestabilizar a ese país
+\item No estoy de acuerdo con ninguna de estas afirmaciones
+\item (99) No responde [NO LEER]
+\end{multiplechoice}
+
+\question{El año pasado, el gobierno de los Estados Unidos trasladó a cientos de venezolanos a una prisión de máxima seguridad en El Salvador llamada CECOT. ¿Recuerda haber escuchado algo sobre esto?}
+\begin{responses}
+\item Sí
+\item No
+\item No estoy seguro/a
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuál de las siguientes opciones describe mejor lo que ocurrió con esos venezolanos?}
+
+\instruction{Preguntar solo si el encuestado/a respondió 'Sí' a la pregunta anterior.}
+\begin{responses}
+\item Siguen presos en el CECOT
+\item Fueron devueltos a sus familias en Venezuela
+\item Fueron trasladados del CECOT a una prisión en Venezuela
+\item Regresaron a los Estados Unidos
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[EXPERIMENTO - ALEATORIZAR] El gobierno de EE.UU. afirma que esos venezolanos son miembros de la banda Tren de Aragua, pero [GRUPO A: el entonces gobierno de Maduro afirmó que ninguno pertenece al Tren de Aragua] [GRUPO B: periodistas que investigaron encontraron que muy pocos tienen antecedentes penales graves] [GRUPO C: una investigación académica independiente encontró que muy pocos siquiera posiblemente tengan vínculos con la banda]. ¿Qué piensa usted?}
+
+\instruction{Preguntar solo si respondió 'Sí' a Q29. Aleatorizar grupos A/B/C.}
+\begin{responses}
+\item Todos son miembros del Tren de Aragua
+\item La mayoría son miembros del Tren de Aragua
+\item Aproximadamente la mitad son miembros del Tren de Aragua
+\item Pocos son miembros del Tren de Aragua
+\item Ninguno es miembro del Tren de Aragua
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su opinión, ¿cuál de las siguientes opciones describe mejor la postura del gobierno de Nicolás Maduro frente a este episodio?}
+\begin{responses}
+\item Ha condenado las deportaciones y ha defendido a los venezolanos detenidos
+\item Ha criticado las deportaciones, pero no ha hecho mucho para ayudar a los detenidos
+\item Ha apoyado o justificado las deportaciones
+\item No ha tomado una postura clara
+\item[(98)] No sabe / No está seguro(a) [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su opinión, ¿cuál de las siguientes opciones describe mejor la postura de la oposición liderada por María Corina Machado frente a este episodio?}
+\begin{responses}
+\item Ha criticado las deportaciones y ha defendido a los venezolanos detenidos
+\item Ha criticado al gobierno de Maduro más que a las deportaciones
+\item Ha apoyado o justificado la colaboración EEUU–El Salvador como parte de la lucha contra el crimen
+\item No ha tomado una postura clara
+\item[(98)] No sabe / No está seguro(a) [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su opinión, ¿qué tipo de relación existe entre el Tren de Aragua y funcionarios del gobierno venezolano?}
+\begin{responses}
+\item Funcionan de manera completamente independiente
+\item Hay algunos funcionarios que tienen vínculos o colaboran con el Tren de Aragua
+\item Muchos funcionarios del gobierno tienen vínculos con el Tren de Aragua
+\item El gobierno controla o dirige al Tren de Aragua
+\item El gobierno ha buscado desarticular el Tren de Aragua
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\section{D: POLÍTICA}
+
+\question{¿Tiene usted conocimiento personal de alguien que haya sido deportado a Venezuela desde los Estados Unidos?}
+\begin{responses}
+\item Sí
+\item No
+\item No estoy seguro/a
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cómo se siente respecto a la relación actual entre el gobierno de Delcy Rodríguez y el gobierno de Donald Trump?}
+\begin{responses}
+\item Muy favorable
+\item Algo favorable
+\item Algo desfavorable
+\item Muy desfavorable
+\item Sin opinión
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cree que esta relación beneficiará a los venezolanos ordinarios?}
+\begin{responses}
+\item Sí, mucho
+\item Sí, algo
+\item Poco
+\item No, nada
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En su opinión, ¿qué nivel de influencia tiene Estados Unidos sobre Venezuela actualmente?}
+\begin{responses}
+\item Mucha influencia
+\item Algo de influencia
+\item Poca influencia
+\item Ninguna influencia
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tanta confianza tiene usted en PDVSA para manejar la industria petrolera del país?}
+\begin{responses}
+\item Mucha confianza
+\item Algo de confianza
+\item Poca confianza
+\item Ninguna confianza
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En una escala del 1 al 10 donde 1 significa ``Ninguna confianza'' y 10 significa ``Confianza total'', ¿qué tanta confianza tiene usted en la labor de las siguientes instituciones del país?}
+
+\instruction{Aleatorizar orden. Usar escala 1-10 para cada institución.}
+
+\vspace{0.3em}
+\begin{tabular}{p{4.5cm}p{8cm}}
+\textbf{Institución} & \textbf{Puntuación (1-10)} \\
+\midrule
+Asamblea Nacional & \_\_\_\_\_ \\
+Tribunal Supremo de Justicia & \_\_\_\_\_ \\
+Consejo Nacional Electoral & \_\_\_\_\_ \\
+Fuerzas Armadas & \_\_\_\_\_ \\
+Iglesia Católica & \_\_\_\_\_ \\
+\end{tabular}
+
+\question{En una escala del 1 al 5, donde 1 significa ``nada democrático'' y 5 significa ``completamente democrático'', ¿qué tan democrático considera que es o era el gobierno de los siguientes presidentes?}
+
+\vspace{0.3em}
+\begin{tabular}{p{4cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}}
+\textbf{Presidente} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\midrule
+Hugo Chávez & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Nicolás Maduro & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+\end{tabular}
+
+\question{Algunas personas dicen que habrá elecciones presidenciales dentro de dos años; otras dicen que no. ¿Qué cree que es más probable?}
+\begin{responses}
+\item Es muy probable que haya elecciones
+\item Es algo probable que haya elecciones
+\item Es poco probable que haya elecciones
+\item Es muy poco probable que haya elecciones
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Qué tan de acuerdo o en desacuerdo está con la siguiente afirmación: Tengo más esperanza sobre el futuro del país ahora que hace un año?}
+\begin{responses}
+\item Muy de acuerdo
+\item De acuerdo
+\item Ni de acuerdo ni en desacuerdo
+\item En desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Voy a leerle una lista de nombres. Para cada uno, dígame si reconoce a la persona. Si la reconoce, dígame si cree que actúa en interés de los venezolanos comunes: Sí, No, o no tiene suficiente información para decirlo.}
+
+\instruction{Aleatorizar orden. Para cada persona: Reconoce Sí/No, luego Si reconoce: Actúa en interés Sí/No/Sin información.}
+
+\vspace{0.3em}
+\begin{tabular}{p{3.5cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+\textbf{Nombre} & \textbf{Reconoce} & \textbf{Sí} & \textbf{No} & \textbf{Sin info} \\
+\midrule
+Nicolás Maduro & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+María Corina Machado & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Jorge Rodríguez & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Diosdado Cabello & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Edmundo González & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+Delcy Rodríguez & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
+\end{tabular}
+
+\question{En las elecciones presidenciales de 2024, ¿cuál de las siguientes opciones describe mejor lo que hizo usted?}
+\begin{responses}
+\item Voté por Nicolás Maduro
+\item Voté por Edmundo González
+\item Voté por otro candidato
+\item No voté
+\item Prefiero no decir
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Si hubiera una elección presidencial este fin de semana, ¿qué haría?}
+\begin{responses}
+\item Votaría por el candidato oficialista
+\item Votaría por el candidato de oposición
+\item Votaría en blanco
+\item No votaría
+\item Prefiero no decir
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Algunas personas dicen que la decisión de María Corina Machado de ceder su nominación al Premio Nobel de la Paz a Donald Trump fue una maniobra política hábil, mientras que otras lo ven como un error estratégico humillante. ¿Cuál visión se acerca más a la suya?}
+\begin{responses}
+\item Fue una maniobra política hábil
+\item Fue un error estratégico humillante
+\item No tengo suficiente información para opinar
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\section{E: ECONOMÍA}
+
+\question{En promedio ¿cuántas veces al día come su grupo familiar?}
+\begin{responses}
+\item Una vez
+\item Dos veces
+\item Tres veces
+\item Más de tres veces
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Durante la última semana, ¿cuántos días su hogar tuvo suficiente comida?}
+\begin{responses}
+\item 7 días (todos los días)
+\item 5-6 días
+\item 3-4 días
+\item 1-2 días
+\item Ningún día
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuál es la situación económica actual de su hogar?}
+\begin{responses}
+\item Muy buena
+\item Buena
+\item Regular
+\item Mala
+\item Muy mala
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Comparado con hace un año, ¿diría que la situación económica de su hogar es...?}
+\begin{responses}
+\item Mucho mejor
+\item Algo mejor
+\item Igual
+\item Algo peor
+\item Mucho peor
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Usted u otras personas de su hogar reciben cajas CLAP?}
+\begin{responses}
+\item Sí, regularmente
+\item Sí, de vez en cuando
+\item No
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Y sus vecinos?}
+\begin{responses}
+\item Sí, la mayoría recibe cajas CLAP
+\item Sí, algunos reciben cajas CLAP
+\item No, pocos o ninguno recibe cajas CLAP
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Que usted sepa, ¿alguno de los siguientes grupos desempeña algún papel en la distribución de cajas CLAP a usted y a sus vecinos? Seleccione todos los que apliquen.}
+\begin{multiplechoice}
+\item Consejo comunal
+\item CLAP local
+\item Colectivos
+\item Funcionarios del gobierno
+\item Líderes comunitarios
+\item No sabe quién distribuye
+\item Otro [especifique]: [ESPACIO]
+\item (99) No responde [NO LEER]
+\end{multiplechoice}
+
+\question{¿Considera que la situación económica del país es mejor, igual o peor que hace seis meses?}
+\begin{responses}
+\item Mucho mejor
+\item Algo mejor
+\item Igual
+\item Algo peor
+\item Mucho peor
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cree que su propia situación económica actual es mejor, igual o peor que hace seis meses?}
+\begin{responses}
+\item Mucho mejor
+\item Algo mejor
+\item Igual
+\item Algo peor
+\item Mucho peor
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Venezuela ha experimentado una aguda crisis económica en los últimos años. ¿Cuál de los siguientes cree que contribuyó a la crisis? Seleccione todos los que apliquen.}
+\begin{multiplechoice}
+\item Sanciones económicas internacionales
+\item Mala gestión gubernamental
+\item Corrupción
+\item Caída de los precios del petróleo
+\item Políticas económicas inadecuadas
+\item Factores externos/globales
+\item Otro [especifique]: [ESPACIO]
+\item (99) No responde [NO LEER]
+\end{multiplechoice}
+
+\question{¿Cuántas veces en el último año su hogar ha quedado sin electricidad?}
+\begin{responses}
+\item Nunca
+\item 1-3 veces
+\item 4-10 veces
+\item 11-20 veces
+\item Más de 20 veces
+\item Constantemente/muy frecuentemente
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuántos días llega el agua por tubería a su hogar?}
+\begin{responses}
+\item 7 días a la semana (todos los días)
+\item 5-6 días a la semana
+\item 3-4 días a la semana
+\item 1-2 días a la semana
+\item Menos de 1 día a la semana
+\item Nunca llega agua por tubería
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuántos días a la semana tiene acceso a gas en su hogar?}
+\begin{responses}
+\item 7 días (todos los días)
+\item 5-6 días
+\item 3-4 días
+\item 1-2 días
+\item Menos de 1 día
+\item Nunca
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En los últimos cinco años, ¿ha tenido que mudarse porque no podía pagar el alquiler?}
+\begin{responses}
+\item Sí
+\item No
+\item No aplica (vivienda propia)
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En el último año, aproximadamente ¿cuántos días al mes diría que sus hijos/as faltaron a la escuela?}
+
+\instruction{Solo para quienes tienen hijos en edad escolar.}
+\begin{responses}
+\item 0 días (no faltaron)
+\item 1-3 días por mes
+\item 4-7 días por mes
+\item 8-15 días por mes
+\item Más de 15 días por mes
+\item No aplica (sin hijos en edad escolar)
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Por qué faltaron sus hijos/as a la escuela? Seleccione todos los que apliquen.}
+
+\instruction{Solo para quienes tienen hijos que faltaron a la escuela.}
+\begin{multiplechoice}
+\item Enfermedad
+\item Problemas económicos (transporte, materiales, etc.)
+\item Inseguridad en el camino a la escuela
+\item Huelgas o problemas en la escuela
+\item Trabajo infantil/ayudar en casa
+\item Falta de maestros
+\item No aplica (hijos no faltaron)
+\item Otro [especifique]: [ESPACIO]
+\end{multiplechoice}
+
+\section{F: DATOS DEMOGRÁFICOS}
+
+\question{¿En qué año nació?}
+
+\noindent Año: \_\_\_\_\_\_\_\_\_
+
+\question{¿Cuál es el nivel de educación más alto completado por el jefe/a del hogar?}
+\begin{responses}
+\item Sin educación formal
+\item Educación primaria incompleta
+\item Educación primaria completa
+\item Educación secundaria incompleta
+\item Educación secundaria completa
+\item Educación superior incompleta
+\item Educación superior completa
+\item Postgrado
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuál es su propio nivel de educación más alto — es decir, el último año de estudios que completó?}
+\begin{responses}
+\item Sin educación formal
+\item Educación primaria incompleta
+\item Educación primaria completa
+\item Educación secundaria incompleta
+\item Educación secundaria completa
+\item Educación superior incompleta
+\item Educación superior completa
+\item Postgrado
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Usando esta tarjeta, ¿podría decirme el ingreso personal del principal sustentador de su hogar, considerando todos los salarios, sueldos, pensiones y pagos recibidos?}
+\begin{responses}
+\item Menos de \$50
+\item \$50 - \$99
+\item \$100 - \$199
+\item \$200 - \$299
+\item \$300 - \$499
+\item \$500 - \$999
+\item \$1000 o más
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Usando la misma tarjeta, ¿cuál es el ingreso mensual total de su hogar, considerando todos los salarios, sueldos, pensiones y pagos recibidos por todos los que viven en esta casa?}
+\begin{responses}
+\item Menos de \$100
+\item \$100 - \$199
+\item \$200 - \$399
+\item \$400 - \$599
+\item \$600 - \$999
+\item \$1000 - \$1999
+\item \$2000 o más
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Usando esta tarjeta, dígame aproximadamente cuánto gasta su hogar mensualmente en víveres básicos y artículos de limpieza.}
+\begin{responses}
+\item Menos de \$50
+\item \$50 - \$99
+\item \$100 - \$149
+\item \$150 - \$199
+\item \$200 - \$299
+\item \$300 - \$499
+\item \$500 o más
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{¿Cuál es su situación laboral actual?}
+\begin{responses}
+\item Empleado/a a tiempo completo
+\item Empleado/a a tiempo parcial
+\item Trabajador/a independiente
+\item Desempleado/a, buscando trabajo
+\item Desempleado/a, no buscando trabajo
+\item Estudiante
+\item Jubilado/a
+\item Ama/o de casa
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Hablando de clases sociales, ¿a qué clase social diría que pertenece: clase alta, media-alta, media, media-baja o clase popular/trabajadora?}
+\begin{responses}
+\item Clase alta
+\item Clase media-alta
+\item Clase media
+\item Clase media-baja
+\item Clase popular/trabajadora
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{Sexo del encuestado/a:}
+\begin{responses}
+\item Masculino
+\item Femenino
+\item Otro
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\section{G: IDENTIFICACIÓN PARTIDARIA}
+
+\question{En general, ¿con cuál partido político se identifica más?}
+
+\instruction{Las opciones específicas se coordinarán con Datanálisis.}
+
+\noindent\textit{[Las opciones específicas se definirán en coordinación con Datanálisis]}
+
+\end{document}
