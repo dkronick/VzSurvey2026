@@ -10,6 +10,8 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{fancybox}
 
 % Fix header height
 \setlength{\headheight}{14pt}
@@ -115,6 +117,36 @@ Si tiene preguntas sobre este estudio, puede comunicarse con (empresa local) al 
 
 \section{A: PERCEPCIONES DE SEGURIDAD Y LA POLICÍA}
 
+
+\question{¿Sabe usted cuál o cuáles cuerpos policiales están a cargo de la seguridad en su sector?}
+\begin{responses}
+\item Sí
+\item No 
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{[Solo para los que digan sí] ¿Cuál o cuáles?}
+\begin{responses}
+\item Policía Nacional Bolivariana
+\item Policía Municipal [Nombrar policía del municipio]
+\item Policía Estatal [Nombrar policía estatal, por ejemplo Polimiranda]
+\item CICPC
+\item Guardia Nacional 
+\item Otro (especifique): \rule{3cm}{0.4pt}
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{En general, ¿qué tan satisfecho/a está con el desempeño de la policía en su sector?}
+\begin{responses}
+\item Muy satisfecho/a
+\item Satisfecho/a
+\item Insatisfecho/a
+\item Muy insatisfecho/a
+\item[(98)] No sabe [NO LEER]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
 \question{Si viera hoy a miembros de los siguientes grupos patrullando su barrio, ¿se sentiría más seguro/a, menos seguro/a, o no haría ninguna diferencia?}
 
 \instruction{Leer cada grupo en voz alta. Registre una respuesta por fila.}
@@ -135,25 +167,6 @@ CICPC & \_\_\_ & \_\_\_ & \_\_\_ \\
 DGCIM & \_\_\_ & \_\_\_ & \_\_\_ \\
 \end{tabular}
 
-\question{En general, ¿qué tan satisfecho/a está con el desempeño de la policía en su sector?}
-\begin{responses}
-\item Muy satisfecho/a
-\item Satisfecho/a
-\item Insatisfecho/a
-\item Muy insatisfecho/a
-\item[(98)] No sabe [NO LEER]
-\item[(99)] No responde [NO LEER]
-\end{responses}
-
-\question{La policía respeta los derechos de los ciudadanos cuando realiza su trabajo.}
-\begin{responses}
-\item Muy de acuerdo
-\item Algo de acuerdo
-\item Algo en desacuerdo
-\item Muy en desacuerdo
-\item[(98)] No sabe [NO LEER]
-\item[(99)] No responde [NO LEER]
-\end{responses}
 
 \question{Y ahora pensando en grupos armados no estatales, voy a mencionarle algunos y le pediré que me diga cuáles de ellos operan en el sector donde usted vive.}
 
@@ -322,6 +335,16 @@ DGCIM & \_\_\_ & \_\_\_ & \_\_\_ \\
 \item Insuficiente número de policías
 \item Embarazo adolescente
 \item Otro — especifique: [ESPACIO]
+\item[(99)] No responde [NO LEER]
+\end{responses}
+
+\question{La policía respeta los derechos de los ciudadanos cuando realiza su trabajo.}
+\begin{responses}
+\item Muy de acuerdo
+\item Algo de acuerdo
+\item Algo en desacuerdo
+\item Muy en desacuerdo
+\item[(98)] No sabe [NO LEER]
 \item[(99)] No responde [NO LEER]
 \end{responses}
 
@@ -560,16 +583,43 @@ Policía estadal & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ & \_\_\_ \\
 
 \question{Observe las siguientes imágenes de agentes de seguridad del Estado. ¿Cuál de estos dos agentes cree que es más probable que disuada el crimen?}
 
-\instruction{Aleatorizar pares de imágenes.}
+\instruction{Aleatorizar COMBINACIONES de pares de imágenes.}
 
-% TODO: Add images here - you'll need to include the image files and use:
-% \begin{figure}[h]
-% \centering
-% \begin{tabular}{cc}
-% \includegraphics[width=0.4\textwidth]{agent1.jpg} & \includegraphics[width=0.4\textwidth]{agent2.jpg} \\
-% Agente A & Agente B
-% \end{tabular}
-% \end{figure}
+\vspace{0.5em}
+\begin{center}
+\fbox{
+\begin{minipage}{0.9\textwidth}
+\centering
+\vspace{0.3em}
+\textbf{PAR 1}\\
+\vspace{0.3em}
+\begin{tabular}{cc}
+\includegraphics[width=0.35\textwidth]{images/pol1.jpg} &
+\includegraphics[width=0.35\textwidth]{images/pol2.jpg} \\
+\textbf{Agente A} & \textbf{Agente B} \\
+\end{tabular}
+\vspace{0.3em}
+\end{minipage}
+}
+\end{center}
+
+\vspace{0.3em}
+\begin{center}
+\fbox{
+\begin{minipage}{0.9\textwidth}
+\centering
+\vspace{0.3em}
+\textbf{PAR 2}\\
+\vspace{0.3em}
+\begin{tabular}{cc}
+\includegraphics[width=0.35\textwidth]{images/pol3.jpg} &
+\includegraphics[width=0.35\textwidth]{images/pol4.jpg} \\
+\textbf{Agente C} & \textbf{Agente D} \\
+\end{tabular}
+\vspace{0.3em}
+\end{minipage}
+}
+\end{center}
 
 \begin{responses}
 \item Agente A
